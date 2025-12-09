@@ -11,6 +11,16 @@ type data struct {
 	lines []string
 }
 
+func (d *data) part1() (int64, error) {
+    var part1 int64
+    return part1, nil
+}
+
+func (d *data) part2() (int64, error) {
+    var part2 int64
+    return part2, nil
+}
+
 func run() error {
 	d := data{}
 	err := utils.OpenAndReadLines("input1.txt", func(s string) error {
@@ -20,10 +30,15 @@ func run() error {
 	if err != nil {
 		return err
 	}
-	fmt.Printf("%#v\n", d)
-	part1 := 0
-	part2 := 0
+	part1, err := d.part1()
+	if err != nil {
+	    return err
+	}
 	fmt.Printf("Part 1: %d\n", part1)
+	part2, err := d.part2()
+	if err != nil {
+	    return err
+	}
 	fmt.Printf("Part 2: %d\n", part2)
 	return nil
 }
