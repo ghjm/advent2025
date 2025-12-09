@@ -21,6 +21,10 @@ func run() error {
 		return err
 	}
 	fmt.Printf("%#v\n", d)
+	part1 := 0
+	part2 := 0
+	fmt.Printf("Part 1: %d\n", part1)
+	fmt.Printf("Part 2: %d\n", part2)
 	return nil
 }
 
